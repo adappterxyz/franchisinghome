@@ -101,6 +101,7 @@ button:active {
 	right: 20px;
 	padding: 10px 20px;
 	background-color: #00a0a0;
+	opacity:0.8;
 	color: white;
 	border: none;
 	border-radius: 5px;
@@ -109,7 +110,9 @@ button:active {
 	z-index: 1000;
 	transition: background-color 0.3s ease;
 }
-
+.logo img{
+ max-width:80%;
+}
 #enter-app:hover {
 	background-color: #008080;
 }
