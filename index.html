@@ -3,11 +3,41 @@
 <html class="gr__threejs_org">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Tech News Visualization</title>
+		<title>Franchising Fun</title>
+		<link rel="icon" href="./img/favicon.png"/>
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body data-gr-c-s-loaded="true" style="">
+		<!-- Add this line after the opening body tag -->
+		<img src="./img/ff.png"/>
+		<a href="https://launch.franchising.fun" target="_blank">
+			<button id="enter-app">Enter App</button>
+		</a>
+		
+<script>
+
+window.toggleModal = function(modalId) {
+	if (!modalId) {
+        // Close all modals if modalId is an empty string or undefined
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.style.display = "none";
+        });
+        console.log('All modals closed'); // Debug log
+        return;
+    }
+
+    const modal = document.getElementById(modalId);
+    console.log('Toggle modal called for:', modalId); // Debug log
+    if (modal) {
+        modal.style.display = modal.style.display === "block" ? "none" : "block";
+    } else {
+        console.error('Modal not found:', modalId); // Debug log
+    }
+}
+
+	</script>
 		<script src="js/three.js"></script>
 		<script src="js/tween.min.js"></script>
 		<script src="js/TrackballControls.js"></script>
@@ -15,13 +45,44 @@
 		<div id="container"></div>
 		<div id="info"></div>
 		<div id="menu">
-			<button id="table">TABLE</button>
-			<button id="sphere">SPHERE</button>
-			<button id="helix">HELIX</button>
-			<button id="grid">GRID</button>
+			
 		</div>
 		<script src="js/data.js"></script>
 		<script src="js/index.js"></script>
 		<script type="text/javascript">( function(){ window.SIG_EXT = {}; } )()</script>
+<!-- ... existing code ... -->
+<div id="menu">
+	<button onclick="window.toggleModal('launch'); ">FAIR LAUNCH</button>
+	<button onclick="window.toggleModal('early'); ">EARLY ACCESS</button>
+	<button onclick="window.toggleModal('dao'); ">FRANCHISE DAO</button>
+
+</div>
+
+<!-- Add modal containers -->
+<div id="launch" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="toggleModal('')">&times;</span>
+        <h2>Fair Launch</h2>
+        <p>Launch on a bonding curve with an operational treasury reserve.</p>
+    </div>
+</div>
+
+<div id="early" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="toggleModal('')">&times;</span>
+        <h2>Early Access</h2>
+        <p>Gain early access to high-growth brands. Invest in the right concepts and the right community.</p>
+    </div>
+</div>
+
+<div id="dao" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="toggleModal('')">&times;</span>
+        <h2>Franchise DAO</h2>
+        <p>Fair disclosures and joint governance for all stakeholders.</p>
+    </div>
+</div>
+
+<!-- ... existing code ... -->
 	</body>
 </html>

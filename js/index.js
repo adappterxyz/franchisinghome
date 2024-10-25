@@ -9,6 +9,11 @@ function run() {
 	animate();
 }
 
+// Add this after your existing event listeners
+
+
+// Add this to your init() function
+
 function init() {
 	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
 	camera.position.z = 3000;
@@ -17,7 +22,11 @@ function init() {
 	for ( var i = 0; i < table.length; i += 5 ) {
 		var element = document.createElement( 'div' );
 		element.className = 'element';
-		element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
+		// Generate random RGB values
+		var r = Math.floor(Math.random() * 256);
+		var g = Math.floor(Math.random() * 256);
+		var b = Math.floor(Math.random() * 256);
+		element.style.backgroundColor = `rgba(${r},${g},${b},${Math.random() * 0.5 + 0.25})`;
 		var number = document.createElement( 'div' );
 		number.className = 'number';
 		number.textContent = table[ i + 2 ];
@@ -95,27 +104,21 @@ function init() {
 	controls = new THREE.TrackballControls( camera, renderer.domElement );
 	controls.rotateSpeed = 0.5;
 	controls.minDistance = 500;
-	controls.maxDistance = 6000;
+	controls.maxDistance = 2000;
 	controls.addEventListener( 'change', render );
-	var button = document.getElementById( 'table' );
-	button.addEventListener( 'click', function ( event ) {
-		transform( targets.table, 2000 );
-	}, false );
-	var button = document.getElementById( 'sphere' );
-	button.addEventListener( 'click', function ( event ) {
-		transform( targets.sphere, 2000 );
-	}, false );
-	var button = document.getElementById( 'helix' );
-	button.addEventListener( 'click', function ( event ) {
-		transform( targets.helix, 2000 );
-	}, false );
-	var button = document.getElementById( 'grid' );
+
+	/**
+	 var button = document.getElementById( 'grid' );
 	button.addEventListener( 'click', function ( event ) {
 		transform( targets.grid, 2000 );
 	}, false );
-	transform( targets.table, 2000 );
+	*/
+	transform( targets.sphere, 2000 );
+	
 	//
+	
 	window.addEventListener( 'resize', onWindowResize, false );
+
 }
 
 function transform( targets, duration ) {

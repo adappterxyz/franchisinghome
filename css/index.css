@@ -94,3 +94,58 @@ button:active {
 	color: #000000;
 	background-color: rgba(0,255,255,0.75);
 }
+
+#enter-app {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #00a0a0;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	z-index: 1000;
+	transition: background-color 0.3s ease;
+}
+
+#enter-app:hover {
+	background-color: #008080;
+}
+
+/* Add these styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: rgba(0,0,0,0.6);
+	color:#FFF;
+	text-align:center;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
