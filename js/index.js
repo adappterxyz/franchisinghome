@@ -23,22 +23,30 @@ function init() {
 		var element = document.createElement( 'div' );
 		element.className = 'element';
 		// Generate random RGB values
+	/*
 		var r = Math.floor(Math.random() * 256);
 		var g = Math.floor(Math.random() * 256);
 		var b = Math.floor(Math.random() * 256);
 		element.style.backgroundColor = `rgba(${r},${g},${b},${Math.random() * 0.5 + 0.25})`;
-		var number = document.createElement( 'div' );
-		number.className = 'number';
-		number.textContent = table[ i + 2 ];
-		element.appendChild( number );
+
+		 */
+		element.style.backgroundColor = `transparent`;
+
+		
 		var symbol = document.createElement( 'div' );
 		symbol.className = 'symbol';
 		symbol.innerHTML = '<a href="' + table[ i ].split('|')[0] + '" target="_blank"><img src="' + table[ i ].split('|')[1] + '"></a>';
 		element.appendChild( symbol );
+		/*
+		var number = document.createElement( 'div' );
+		number.className = 'number';
+		number.textContent = table[ i + 2 ];
+		element.appendChild( number );
 		var details = document.createElement( 'div' );
 		details.className = 'details';
 		details.innerHTML = table[ i + 1 ];
 		element.appendChild( details );
+		*/
 		var object = new THREE.CSS3DObject( element );
 		object.position.x = Math.random() * 4000 - 2000;
 		object.position.y = Math.random() * 4000 - 2000;
