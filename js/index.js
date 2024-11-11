@@ -18,6 +18,26 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
 	camera.position.z = 3000;
 	scene = new THREE.Scene();
+
+	var centerText = document.createElement('div');
+    centerText.className = 'center-text';
+    centerText.textContent = 'Kickstart the next wave of Global Brands onchain';
+    centerText.style.color = 'white';
+    centerText.style.fontSize = '48px';
+    centerText.style.fontWeight = 'bold';
+    centerText.style.position = 'absolute';
+    centerText.style.transform = 'translate(-50%, -50%)';
+    
+	centerText.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)';
+// or
+centerText.style.backgroundColor = 'rgba(0,0,0,0.3)';
+centerText.style.padding = '20px';
+centerText.style.borderRadius = '10px';
+
+    var centerTextObject = new THREE.CSS3DObject(centerText);
+    centerTextObject.position.set(0, 0, 0); // Position at center
+    scene.add(centerTextObject);
+	
 	// table
 	for ( var i = 0; i < table.length; i += 5 ) {
 		var element = document.createElement( 'div' );

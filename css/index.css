@@ -8,6 +8,11 @@ body {
 	font-family: Helvetica, sans-serif;;
 	overflow: hidden;
 }
+.center-text {
+    pointer-events: none; /* This ensures the text doesn't interfere with interactions */
+    text-align: center;
+    white-space: nowrap;
+}
 
 a {
 	color: #ffffff;
