@@ -23,7 +23,7 @@ function init() {
     centerText.className = 'center-text';
     centerText.textContent = 'Kickstart the next wave of Global Brands onchain';
     centerText.style.color = 'white';
-    centerText.style.fontSize = '48px';
+    centerText.style.fontSize = '4.5vw';
     centerText.style.fontWeight = 'bold';
     centerText.style.position = 'absolute';
     centerText.style.transform = 'translate(-50%, -50%)';

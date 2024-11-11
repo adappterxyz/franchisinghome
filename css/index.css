@@ -159,3 +159,32 @@ button:active {
 .close:hover {
     color: black;
 }
+
+.centered-button {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+}
+
+#enter-app {
+	position:relative;
+    padding: 15px 30px;
+    font-size: 5vm;
+	min-width: 200px;
+	margin: 10vh auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+#enter-app:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
