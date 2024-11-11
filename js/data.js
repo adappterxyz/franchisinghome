@@ -31,9 +31,31 @@ var table = [
     "Pizza Hut: From Kansas to Over 18,000 Locations Worldwide", 
     "05/Sep", 1, 8,
 
+    
+    "https://www.7-eleven.com|./img/711.png", 
+    "7-Eleven: The World's Largest Convenience Store Franchise", 
+    "05/Sep", 2, 3,
+
+    
+
     "https://www.hardrockcafe.com|./img/hardrock.png", 
     "Hard Rock Cafe: Merging Rock Music and Dining into a Global Franchise", 
     "05/Sep", 1, 9,
+
+
+
+    "https://www.haidilao-inc.com/sg |./img/hdl.png", 
+    "Five Guys: The Fast-Casual Burger Revolution", 
+    "05/Sep", 2, 9,
+
+    "https://www.chagee.com.sg/en |./img/cg.png", 
+    "Five Guys: The Fast-Casual Burger Revolution", 
+    "05/Sep", 2, 9,
+
+    
+    "https://www.mixue.asia |./img/mx.png", 
+    "Five Guys: The Fast-Casual Burger Revolution", 
+    "05/Sep", 2, 9,
 
     "https://www.burgerking.com|./img/bk.png", 
     "Burger King: The Battle for the Burger Crown", 
@@ -43,9 +65,6 @@ var table = [
     "Dunkin': From Donuts to Coffee, a Brand Evolution", 
     "05/Sep", 2, 2,
 
-    "https://www.7-eleven.com|./img/711.png", 
-    "7-Eleven: The World's Largest Convenience Store Franchise", 
-    "05/Sep", 2, 3,
 
     "https://www.arbys.com|./img/af.png", 
     "Arby's: Pioneering Different Fast Food", 
@@ -69,5 +88,6 @@ var table = [
 
     "https://www.fiveguys.com|./img/ff.png", 
     "Five Guys: The Fast-Casual Burger Revolution", 
-    "05/Sep", 2, 9
+    "05/Sep", 2, 9,
+
 ];

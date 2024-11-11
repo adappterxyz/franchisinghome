@@ -23,7 +23,7 @@ function init() {
     centerText.className = 'center-text';
     centerText.textContent = 'Kickstart the next wave of Global Brands onchain';
     centerText.style.color = 'white';
-    centerText.style.fontSize = '4.5vw';
+    centerText.style.fontSize = '6.5vmin';
     centerText.style.fontWeight = 'bold';
     centerText.style.position = 'absolute';
     centerText.style.transform = 'translate(-50%, -50%)';
@@ -36,6 +36,8 @@ centerText.style.borderRadius = '10px';
 
     var centerTextObject = new THREE.CSS3DObject(centerText);
     centerTextObject.position.set(0, 0, 0); // Position at center
+    centerTextObject.rotation.x = -0.3; // Tilt forward
+    centerTextObject.rotation.y = 0.2;  // Slight rotation on Y axis
     scene.add(centerTextObject);
 	
 	// table

@@ -102,21 +102,7 @@ button:active {
 	background-color: rgba(0,255,255,0.75);
 }
 
-#enter-app {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	padding: 10px 20px;
-	background-color: #00a0a0;
-	opacity:0.8;
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
-	z-index: 1000;
-	transition: background-color 0.3s ease;
-}
+
 .logo img{
  max-width:80%;
 }
@@ -172,7 +158,7 @@ button:active {
 #enter-app {
 	position:relative;
     padding: 15px 30px;
-    font-size: 5vm;
+    font-size: 3vmin;
 	min-width: 200px;
 	margin: 10vh auto;
     background: rgba(255, 255, 255, 0.1);
