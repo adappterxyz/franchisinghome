@@ -63,6 +63,25 @@ THREE.CSS3DRenderer = function () {
 
 	domElement.appendChild( cameraElement );
 
+	var video = document.createElement('video');
+    video.src = 'img/ffbg.mp4';
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.style.position = 'fixed';
+    video.style.top = '0';
+    video.style.left = '0';
+    video.style.width = '100%';
+    video.style.height = '100%';
+    video.style.objectFit = 'cover';
+    video.style.zIndex = '-1';
+    document.body.insertBefore(video, document.body.firstChild);
+    
+    video.play().catch(function(error) {
+        console.log("Video autoplay failed:", error);
+    });
+
 	var isIE = /Trident/i.test( navigator.userAgent );
 
 	this.setClearColor = function () {};
